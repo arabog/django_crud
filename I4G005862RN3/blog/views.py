@@ -18,3 +18,18 @@ class PostCreateView(generic.CreateView):
 
 class PostDetailView:
     model = Post
+
+
+class PostUpdateView:
+    model = Post
+    fields = “__all__”
+    success_url  = reverse_lazy(“blog:all”)
+
+
+class PostDeleteView:
+    model = Post
+    fields = “__all__”
+    success_url  = reverse_lazy(“blog:all”)
+
+
+    
