@@ -6,8 +6,8 @@ from .models import Post
 
 class PostAdmin(admin.ModelAdmin):
     list_display = ('title', 'slug', 'status', 'created', 'author')
-    search_fields = ['title', 'body']
-    prepopulated_fields = {'slug': ('title')}
+    # search_fields = ['title', 'body']
+    # prepopulated_fields = {'slug': ('title',)}
 
 
 admin.site.register(Post, PostAdmin)
